@@ -13,6 +13,7 @@
 		C20751F127CCD92C0060793C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20751EF27CCD92C0060793C /* Main.storyboard */; };
 		C20751F327CCD92D0060793C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20751F227CCD92D0060793C /* Assets.xcassets */; };
 		C20751F627CCD92D0060793C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20751F427CCD92D0060793C /* LaunchScreen.storyboard */; };
+		C20751FF27CD10F80060793C /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20751FE27CD10F80060793C /* Questions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C20751F227CCD92D0060793C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C20751F527CCD92D0060793C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C20751F727CCD92D0060793C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C20751FE27CD10F80060793C /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				C20751E927CCD92C0060793C /* AppDelegate.swift */,
 				C20751EB27CCD92C0060793C /* SceneDelegate.swift */,
+				C20751FD27CD10C50060793C /* Model */,
 				C20751ED27CCD92C0060793C /* ViewController.swift */,
 				C20751EF27CCD92C0060793C /* Main.storyboard */,
 				C20751F227CCD92D0060793C /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				C20751F727CCD92D0060793C /* Info.plist */,
 			);
 			path = MillionGame;
+			sourceTree = "<group>";
+		};
+		C20751FD27CD10C50060793C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C20751FE27CD10F80060793C /* Questions.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20751EE27CCD92C0060793C /* ViewController.swift in Sources */,
+				C20751FF27CD10F80060793C /* Questions.swift in Sources */,
 				C20751EA27CCD92C0060793C /* AppDelegate.swift in Sources */,
 				C20751EC27CCD92C0060793C /* SceneDelegate.swift in Sources */,
 			);
