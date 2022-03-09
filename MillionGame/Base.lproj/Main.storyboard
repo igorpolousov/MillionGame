@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start Screen View Controller-->
         <scene sceneID="JUx-Vd-a2V">
             <objects>
-                <viewController id="2r6-kj-FvT" sceneMemberID="viewController">
+                <viewController id="2r6-kj-FvT" customClass="StartScreenViewController" customModule="MillionGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XGq-bl-C67">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.57783124249019313" green="0.54774828073814963" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="gameStart:" destination="2r6-kj-FvT" eventType="touchUpInside" id="XIU-Vc-gpg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User results" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7m-EX-WA5">
                                 <rect key="frame" x="25" y="267" width="370" height="70"/>
@@ -39,6 +42,9 @@
                         <viewLayoutGuide key="safeArea" id="Zn6-Hg-goo"/>
                         <color key="backgroundColor" red="0.92549026010000002" green="0.92941176889999999" blue="0.94117647410000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="userResultsLabel" destination="c7m-EX-WA5" id="Ckb-bP-AON"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3je-9J-WJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,6 +121,9 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.90129367959999995" green="0.82997457200000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="halfButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Exf-r7-0P1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB3-Rw-fbd">
                                 <rect key="frame" x="216" y="570" width="178" height="52"/>
@@ -126,11 +135,21 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.90129367959999995" green="0.82997457200000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="heplButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XlM-kM-ww2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </view>
+                    <connections>
+                        <outlet property="answerButton1" destination="UlY-Bc-jOB" id="Ma9-17-BwX"/>
+                        <outlet property="answerButton2" destination="W8i-gz-QCm" id="tsC-NT-7Gf"/>
+                        <outlet property="answerButton3" destination="FBQ-dH-FgS" id="YTc-t1-4H4"/>
+                        <outlet property="answerButton4" destination="UcY-7d-vQd" id="0iG-Xc-hBx"/>
+                        <outlet property="questionLabel" destination="MRl-1j-CKi" id="o5Z-nP-Ew1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
