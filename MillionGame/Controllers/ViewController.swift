@@ -41,18 +41,4 @@ class ViewController: UIViewController {
 
 }
 
-extension UIButton {
-    func applyDesign() {
-        self.layer.borderColor = UIColor.lightGray.cgColor
-        self.layer.borderWidth = 1.5
-        self.layer.cornerRadius = 3
-    }
-}
 
-extension UILabel {
-    func applyDesign() {
-        self.layer.borderColor = UIColor.lightGray.cgColor
-        self.layer.borderWidth = 1.5
-        self.layer.cornerRadius = 3
-    }
-}
