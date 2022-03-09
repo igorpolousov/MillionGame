@@ -83,8 +83,8 @@
 		C20DE85127D8D1C000E61B20 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C20751ED27CCD92C0060793C /* ViewController.swift */,
 				C20DE85427D8D23000E61B20 /* StartScreenViewController.swift */,
+				C20751ED27CCD92C0060793C /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

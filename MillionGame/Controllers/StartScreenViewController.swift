@@ -10,14 +10,25 @@ import UIKit
 class StartScreenViewController: UIViewController {
     
     @IBAction func gameStart(_ sender: Any) {
+        startGame()
     }
     
+    @IBOutlet var startGameButton: UIButton!
     @IBOutlet var userResultsLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userResultsLabel.applyDesign()
+        startGameButton.applyDesign()
+    }
+    
+    func startGame() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameContorller") as? ViewController {
+            if let window = self.view.window {
+                window.rootViewController = vc
+            }
+        }
         
     }
-
-
 }
