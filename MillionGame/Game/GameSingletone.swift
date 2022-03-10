@@ -11,7 +11,22 @@ import Foundation
 final class Game {
     
     let standart = Game()
+    private(set) var records = [Record]()
     
     var gameSession: GameSession?
+    
+    private init() {}
+    
+    func createRecord() {
+        let record = Record(date: Date(), score: <#T##Int#>)
+    }
+    
+    func addRecord(_ record: Record) {
+        self.records.append(record)
+    }
+    
+    func clearRecords() {
+        self.records = []
+    }
     
 }

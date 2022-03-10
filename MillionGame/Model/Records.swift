@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Records {
+struct Record {
     var date: Date
     var score: Int
 }
