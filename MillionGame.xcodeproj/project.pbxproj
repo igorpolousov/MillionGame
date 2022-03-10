@@ -21,6 +21,7 @@
 		C2412C5427DA3959003D16AA /* Game+Memento.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2412C5327DA3959003D16AA /* Game+Memento.swift */; };
 		C291769827DA3F600018A8B4 /* ResultsControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C291769727DA3F600018A8B4 /* ResultsControllerTableViewController.swift */; };
 		C291769A27DA3FFE0018A8B4 /* Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = C291769927DA3FFE0018A8B4 /* Records.swift */; };
+		C291769C27DA46AD0018A8B4 /* GameStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C291769B27DA46AD0018A8B4 /* GameStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C2412C5327DA3959003D16AA /* Game+Memento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+Memento.swift"; sourceTree = "<group>"; };
 		C291769727DA3F600018A8B4 /* ResultsControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsControllerTableViewController.swift; sourceTree = "<group>"; };
 		C291769927DA3FFE0018A8B4 /* Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Records.swift; sourceTree = "<group>"; };
+		C291769B27DA46AD0018A8B4 /* GameStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				C2412C4F27DA3806003D16AA /* GameSingletone.swift */,
 				C2412C5127DA388A003D16AA /* GameSession.swift */,
 				C2412C5327DA3959003D16AA /* Game+Memento.swift */,
+				C291769B27DA46AD0018A8B4 /* GameStorage.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				C291769A27DA3FFE0018A8B4 /* Records.swift in Sources */,
 				C291769827DA3F600018A8B4 /* ResultsControllerTableViewController.swift in Sources */,
 				C20DE85827D8E63700E61B20 /* Extensions.swift in Sources */,
+				C291769C27DA46AD0018A8B4 /* GameStorage.swift in Sources */,
 				C20751FF27CD10F80060793C /* Questions.swift in Sources */,
 				C20751EA27CCD92C0060793C /* AppDelegate.swift in Sources */,
 				C20751EC27CCD92C0060793C /* SceneDelegate.swift in Sources */,

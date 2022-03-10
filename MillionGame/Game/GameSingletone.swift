@@ -17,9 +17,6 @@ final class Game {
     
     private init() {}
     
-    func createRecord() {
-        let record = Record(date: Date(), score: <#T##Int#>)
-    }
     
     func addRecord(_ record: Record) {
         self.records.append(record)

@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Record {
+struct Record: Codable {
     var date: Date
     var score: Int
 }

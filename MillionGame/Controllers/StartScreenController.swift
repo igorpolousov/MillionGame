@@ -24,7 +24,7 @@ class StartScreenController: UIViewController {
     }
     
     func startGame() {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameContorller") as? ViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameContorller") as? GameController {
             if let window = self.view.window {
                 window.rootViewController = vc
             }
