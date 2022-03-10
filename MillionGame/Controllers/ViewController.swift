@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var answerButton2: UIButton!
     @IBOutlet var answerButton3: UIButton!
     @IBOutlet var answerButton4: UIButton!
+    
     @IBOutlet var halfButton: UIButton!
     @IBOutlet var helpButton: UIButton!
     
@@ -46,10 +47,10 @@ class ViewController: UIViewController {
     }
 
 
-    func askQuestion() {
+    func askQuestion(action: UIAlertAction! = nil) {
+        let answers = questions[questionNumber].answers
         questionLabel.text = questions[questionNumber].question
         
-        let answers = questions[questionNumber].answers
         answerButton1.titleLabel?.text = answers[0]
         answerButton2.titleLabel?.text = answers[1]
         answerButton3.titleLabel?.text = answers[2]
@@ -62,29 +63,32 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
         
         var title = ""
+        var message = ""
+        
         if sender.tag == correctAnswer {
-            title = "Это правильный ответ"
             questionNumber += 1
-            askQuestion()
+            title = "Это правильный ответ"
+            message = "Правильное количество ответов \(questionNumber)"
+            
         } else {
             title = "Ошибка"
-            endGame()
+            message = "Игра окончена, попробуйте еще раз"
         }
-        
-        alertContorller(title)
-    }
-    
-    func alertContorller(_ answerType: String) {
-        let ac = UIAlertController(title: answerType, message: nil, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if sender.tag == correctAnswer {
+            ac.addAction(UIAlertAction(title: "Okay", style: .default, handler: askQuestion))
+        } else {
+            ac.addAction(UIAlertAction(title: "Okay", style: .default, handler: endGame))
+        }
         present(ac, animated: true)
+        
     }
     
-    func endGame() {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "StartController") as? ViewController {
-            if let window = self.view.window {
-                window.rootViewController = vc
-            }
+    func endGame(action: UIAlertAction) {
+         if let vc = storyboard?.instantiateViewController(withIdentifier: "StartController") as? StartScreenViewController {
+             if let window = self.view.window {
+                 window.rootViewController = vc
+             }
         }
     }
 }
