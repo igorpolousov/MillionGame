@@ -13,6 +13,7 @@ extension UIButton {
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.layer.borderWidth = 1.5
         self.layer.cornerRadius = 5
+        self.titleLabel?.font = UIFont(name: "Chalkduster", size: 17)
     }
 }
 
