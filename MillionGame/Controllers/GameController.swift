@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameController: UIViewController {
 
     @IBOutlet var questionLabel: UILabel!
     
@@ -39,7 +39,6 @@ class ViewController: UIViewController {
         answerButton2.applyDesign()
         answerButton3.applyDesign()
         answerButton4.applyDesign()
-        
         
         halfButton.applyDesign()
         helpButton.applyDesign()
@@ -85,7 +84,7 @@ class ViewController: UIViewController {
     }
     
     func endGame(action: UIAlertAction) {
-         if let vc = storyboard?.instantiateViewController(withIdentifier: "StartController") as? StartScreenViewController {
+         if let vc = storyboard?.instantiateViewController(withIdentifier: "StartController") as? StartScreenController {
              if let window = self.view.window {
                  window.rootViewController = vc
              }

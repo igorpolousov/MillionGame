@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StartScreenViewController: UIViewController {
+class StartScreenController: UIViewController {
     
     @IBAction func gameStart(_ sender: Any) {
         startGame()
