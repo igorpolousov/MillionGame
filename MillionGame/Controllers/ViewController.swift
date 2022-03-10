@@ -23,9 +23,15 @@ class ViewController: UIViewController {
     @IBAction func halfButton(_ sender: UIButton) {
     }
     
+    var correctAnswer = 0
+    var questionNumber = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        askQuestion()
+        
         questionLabel.applyDesign()
         
         answerButton1.applyDesign()
@@ -33,12 +39,54 @@ class ViewController: UIViewController {
         answerButton3.applyDesign()
         answerButton4.applyDesign()
         
+        
         halfButton.applyDesign()
         helpButton.applyDesign()
       
     }
 
 
+    func askQuestion() {
+        questionLabel.text = questions[questionNumber].question
+        
+        let answers = questions[questionNumber].answers
+        answerButton1.titleLabel?.text = answers[0]
+        answerButton2.titleLabel?.text = answers[1]
+        answerButton3.titleLabel?.text = answers[2]
+        answerButton4.titleLabel?.text = answers[3]
+        
+        correctAnswer = questions[questionNumber].correctAnswer
+       
+    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        
+        var title = ""
+        if sender.tag == correctAnswer {
+            title = "Это правильный ответ"
+            questionNumber += 1
+            askQuestion()
+        } else {
+            title = "Ошибка"
+            endGame()
+        }
+        
+        alertContorller(title)
+    }
+    
+    func alertContorller(_ answerType: String) {
+        let ac = UIAlertController(title: answerType, message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        present(ac, animated: true)
+    }
+    
+    func endGame() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "StartController") as? ViewController {
+            if let window = self.view.window {
+                window.rootViewController = vc
+            }
+        }
+    }
 }
 
 
